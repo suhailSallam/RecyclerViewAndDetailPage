@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/drawable-v24/textview_border.xml" value="0.121" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout-land/activity_info.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout-land/list_row.xml" value="0.264" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout/activity_info.xml" value="0.2" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout/list_row.xml" value="0.264" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout/list_row.xml (land)" value="0.17481884057971014" />
+        <entry key="..\:/Users/Huawei/AndroidStudioProjects/RecyclerViewAndDetailPage/app/src/main/res/layout/textview_border.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="D:/Baba/Android Development/RV DOC" />
+    <option name="OPTION_SCOPE" value="package" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

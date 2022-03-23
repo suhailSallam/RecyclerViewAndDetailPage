@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:fitsSystemWindows="false"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:paddingLeft="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_border"
+            android:orientation="vertical"
+            android:paddingBottom="5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth_bold"
+                android:paddingLeft="20dp"
+                android:paddingTop="10sp"
+                android:paddingRight="20dp"
+                android:layout_marginStart="5dp"
+                android:shadowColor="@android:color/holo_blue_bright"
+                android:shadowRadius="40"
+                android:text="@string/txv_title"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/s_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aref_ruqaa"
+                android:paddingLeft="20dp"
+                android:paddingTop="7sp"
+                android:paddingRight="20dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_short_details"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="7sp"
+                android:paddingRight="20dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_long_details"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/artifika"
+                android:paddingLeft="20dp"
+                android:paddingTop="7sp"
+                android:paddingRight="20dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_price"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
