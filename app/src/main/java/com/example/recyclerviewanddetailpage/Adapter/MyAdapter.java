@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +15,7 @@ import com.example.recyclerviewanddetailpage.Model.Listitem;
 // MyAdapter class, define context and list
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private Context context;
-    private  List<Listitem> listitems;
+    private List<Listitem> listitems;
 // MyAdapter Constructor, where get values of instance variables defined
     public MyAdapter(Context context , List listitem) {
         this.context = context;
@@ -33,6 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.ViewHolder holder, int position) {
         Listitem item = listitems.get(position);
+        holder.itemImage.setImageResource(item.getintImage());
         holder.name.setText(item.getName());
         holder.l_description.setText(item.get_l_Description());
         holder.s_description.setText(item.get_s_Description());
@@ -48,6 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 //   contains the constructor
 //   implements View,onClickListener if you want to click and move to new activity
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        private ImageView itemImage;
         private TextView name;
         private TextView l_description;
         private TextView s_description;
@@ -56,6 +59,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
+            itemImage = itemView.findViewById(R.id.imageViewId);
             name = itemView.findViewById(R.id.title);
             l_description = itemView.findViewById(R.id.l_info);
             s_description = itemView.findViewById(R.id.s_info);
@@ -71,6 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             int position = getAdapterPosition();
             Listitem item = listitems.get(position);
             Intent intent = new Intent(context, InfoActivity.class);
+            intent.putExtra("intImage",item.getintImage());
             intent.putExtra("name",item.getName());
             intent.putExtra("l_description",item.get_l_Description());
             intent.putExtra("s_description",item.get_s_Description());

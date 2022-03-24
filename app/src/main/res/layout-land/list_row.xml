@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
+    android:fitsSystemWindows="false"
     android:focusable="true"
     android:orientation="vertical"
     android:paddingTop="5dp">
@@ -13,70 +14,114 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="20sp"
-        android:paddingEnd="20sp"
-        app:cardUseCompatPadding="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="15sp"
+        android:paddingLeft="20sp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/textview_border"
-            android:orientation="vertical"
-            android:paddingBottom="5sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth_bold"
-                android:paddingLeft="20dp"
-                android:paddingTop="10sp"
-                android:paddingRight="20dp"
-                android:shadowColor="@android:color/holo_red_light"
-                android:shadowRadius="40"
-                android:text="@string/txv_title"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="20sp" />
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/s_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aref_ruqaa"
-                android:paddingLeft="20dp"
-                android:paddingTop="7sp"
-                android:paddingRight="20dp"
-                android:text="@string/txv_short_details"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/imageViewId"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const2"
+                android:layout_width="520dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/artifika"
-                android:paddingLeft="20dp"
-                android:paddingTop="7sp"
-                android:paddingRight="20dp"
-                android:text="@string/txv_price"
-                android:textColor="@android:color/holo_purple"
-                android:textSize="16sp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/const1"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/l_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txv_long_details"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="16sp"
-                android:visibility="gone" />
+                <LinearLayout
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_border"
+                    android:orientation="vertical"
+                    android:paddingBottom="5sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10sp"
+                        android:paddingRight="20dp"
+                        android:shadowColor="@android:color/holo_blue_bright"
+                        android:shadowRadius="40"
+                        android:text="@string/txv_title"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/artifika"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="7sp"
+                        android:paddingRight="20dp"
+                        android:text="@string/txv_price"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/s_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/aref_ruqaa"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="7sp"
+                        android:paddingRight="20dp"
+                        android:text="@string/txv_short_details"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/l_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="7sp"
+                        android:paddingRight="20dp"
+                        android:text="@string/txv_long_details"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
+
+
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,17 +1,30 @@
 package com.example.recyclerviewanddetailpage.Model;
+
+import android.widget.ImageView;
+
 //Listitems Class,
 //     defining private variables for items to be used in the list
 public class Listitem {
     private String name , price,l_description, s_description;
+    private int intImage;
 //Listitem constructor
 //     give the the local variable values of the calling parameters
-    public Listitem(String name , String s_description ,String l_description, String price) {
+    public Listitem(int intImage,String name , String s_description ,String l_description, String price) {
+        this.intImage = intImage;
         this.name =name;
         this.l_description = l_description;
         this.s_description = s_description;
         this.price = price;
     }//end constructor Listitem
-//get method of the first variable
+    //get method of the image variable
+    public int getintImage() {
+        return intImage;
+    }
+    //set method of the image variable
+    public void setintImage(int intImage) {
+        this.intImage = intImage;
+    }
+    //get method of the first variable
     public String getName() {
         return name;
     }

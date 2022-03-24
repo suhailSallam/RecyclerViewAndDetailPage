@@ -4,75 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
     tools:context=".InfoActivity">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/andika"
-        android:gravity="center"
-        android:text="@string/details_info"
-        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/name"
+        android:layout_width="438dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:gravity="left"
+        android:text="Name goes here"
+        android:textColor="#1e3799"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/imageViewId"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:fontFamily="@font/amaranth_bold"
-        android:gravity="left"
-        android:text="TextView"
-        android:textColor="#1e3799"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <TextView
         android:id="@+id/price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="438dp"
+        android:layout_height="48dp"
         android:fontFamily="@font/aref_ruqaa"
         android:gravity="left"
-        android:text="TextView"
+        android:text="Price goes here"
         android:textColor="#4a69bd"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toEndOf="@+id/imageViewId"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
-        android:id="@+id/l_Desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/textview_border"
-        android:fontFamily="@font/artifika"
-        android:paddingLeft="16sp"
-
-        android:text="TextView"
-        android:textColor="#6a89cc"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/price"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
         android:id="@+id/s_Desc"
-        android:layout_width="351dp"
-        android:layout_height="43dp"
+        android:layout_width="79dp"
+        android:layout_height="92dp"
         android:fontFamily="cursive"
         android:text="TextView"
         android:textSize="20sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/l_Desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewId"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewId">
+
+        <TextView
+            android:id="@+id/l_Desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_border"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="16sp"
+            android:paddingTop="5dp"
+            android:text="Long Discription goes here"
+            android:textColor="#6a89cc"
+            android:textSize="15sp" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
